@@ -1,0 +1,28 @@
+{% extends "polls/base.html" %}
+{% block heading %}Sign In{% endblock %}
+			{% block content %}
+		
+{% if next %}
+  {% if user.is_authenticated %}
+    <p>Your account doesn't have access to this page. To proceed,
+      please login with an account that has access.</p>
+    {% else %}
+      <p>Please login to see this page.</p>
+    {% endif %}
+{% endif %}
+<form method="post" action="{% url 'login' %}" class="loginform">
+{% csrf_token %}
+<label for="username">Username:</label>
+<input class="fieldl" type="text" name="username" placeholder="username"><br>
+
+<label for="username">Password: </label>
+<input class="passfield" type="password" name="password" placeholder="password"><br>
+
+  <input type="submit" value="login" class="btnlogin"/>
+  <input type="hidden" name="next" value="{{ next }}" />
+</form>
+{% if form.errors %}
+    <p class="loginError">Your username and password didn't match. <br>Please try again.</p>
+{% endif %}
+
+{% endblock %}

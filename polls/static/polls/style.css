@@ -48,16 +48,53 @@ address{
 	padding-top:15px;
 	text-decoration: underline;
 }
-
 .creds{
 	text-align: center;
 }
 .creds a:hover{
 	color: chocolate;
 }
-li:hover,a:hover, label:hover{
+li:hover,a:hover, label .choice:hover, .loginagain:hover{
 	color:darkcyan;
 }
 .btn{
 	color:black;
+}
+a .loginagain{
+	text-decoration: underline;
+	color:darkcyan;
+}
+
+.btnlogin{
+	color: black;
+	width: 20%;
+	margin-left: 45%;
+}
+
+.passfield{
+	margin-left: 1.5%;
+}
+
+.fieldl,.passfield{
+	color: black;
+}
+
+.loginError{
+	font-size: 15px;
+	color: rgb(185, 106, 106);
+}
+
+.logoutbtn{
+	color: burlywood;
+	font-size: 17px;
+	float: right;
+	padding-top: 1%;
+}
+
+.heading{
+	font-size: 30px;
+}
+
+.goback{
+	color:cadetblue;
 }

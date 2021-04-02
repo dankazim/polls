@@ -1,4 +1,6 @@
 {% extends "polls/base.html" %}
+{% block heading %}Results  <a class="logoutbtn" href="{% url 'logout'%}">Logout</a>{% endblock %}
+
 {% block content %}
 
 	<h2>{{question.id}}. {{ question.question_text}}</h2>
@@ -11,4 +13,7 @@
 	
 	<button><a href="{% url 'polls:detail' question.id %}" class="btn">Vote Again</a></button>
 	<button><a href="{% url 'polls:reset' question.id %}" class="btn">Reset Votes</a></button>
+	<br>
+	<br>
+	<a class="goback" href={% url 'polls:index' %}>Go back to index</a>
 {% endblock %}

@@ -1,4 +1,5 @@
 {% extends "polls/base.html" %}
+{% block heading %}Questions  <a class="logoutbtn" href="{% url 'logout'%}">Logout</a>{% endblock %}
 {% block content %}
 
 		<h2>Polls V.1.0</h2>
@@ -12,4 +13,6 @@
 		    <p>No polls are available.</p>
 		    
 		{% endif %}
+		<br>
+	
 {% endblock %}
